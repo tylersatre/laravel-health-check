@@ -1,8 +1,8 @@
-<img src="https://images.ukfast.co.uk/logos/ukfast/441x126_transparent_strapline.png" alt="UKFast Logo" width="350px" height="auto" />
-
-![Tests](https://github.com/ukfast/laravel-health-check/workflows/Run%20tests/badge.svg?branch=master)
-
 # Health Check Package
+
+> Fork of [ans-group/laravel-health-check](https://github.com/ans-group/laravel-health-check)
+
+![Tests](https://github.com/tylersatre/laravel-health-check/workflows/Checks/badge.svg?branch=master)
 
 The purpose of this package is to surface a health-check endpoint on `/health` which, when hit, returns the status of all the services and dependencies your project relies on, along with the overall health of your system. This is useful in both development and production for debugging issues with a faulty application.
 
@@ -13,7 +13,7 @@ This package also adds a `/ping` endpoint. Just hit `/ping` and receive `pong` i
 
 To install the package:
 
-Run  `composer require ans-group/laravel-health-check` to add the package to your dependencies.
+Run  `composer require tylersatre/laravel-health-check` to add the package to your dependencies.
 
 This will automatically install the package to your vendor folder.
 
@@ -355,18 +355,14 @@ Finally, hit the `/health` endpoint, depending on if your app can actually hit R
 
 ## Contributing
 
-We welcome contributions to this package that will be beneficial to the community.
-
-You can reach out to our open-source team via **open-source@ukfast.co.uk** who will get back to you as soon as possible.
-
-Please refer to our [CONTRIBUTING](CONTRIBUTING.md) file for more information.
+Contributions are welcome. Please refer to the [CONTRIBUTING](CONTRIBUTING.md) file for more information.
 
 
 ## Security
 
-If you think you have identified a security vulnerability, please contact our team via **security@ukfast.co.uk** who will get back to you as soon as possible, rather than using the issue tracker.
+If you think you have identified a security vulnerability, please use the [issue tracker](https://github.com/tylersatre/laravel-health-check/issues) to report it.
 
 
 ## Licence
 
-This project is licenced under the MIT Licence (MIT). Please see the [Licence](LICENCE) file for more information.
+This project is licenced under the MIT Licence (MIT). Please see the [Licence](LICENSE) file for more information.

@@ -7,6 +7,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.0.0] - 2026-03-23
+
+### Added
+
+- Support for Laravel 13
+- Support for PHP 8.5
+- CI test coverage for PHP 8.2–8.5 with Laravel 12–13
+
+### Removed
+
+- **(breaking change)** Dropped support for Laravel < 12.0
+- **(breaking change)** Dropped support for Orchestra Testbench < 10.0
+
+### Fixed
+
+- Fix Rector config where duplicate `withSkip()` calls caused vendor directory to be scanned
+- Apply Rector fixes: strict comparisons, arrow function return types, typed magic method parameters
+
+### Changed
+
+- Fork published as `tylersatre/laravel-health-check`
+- Updated documentation and metadata to reflect fork
+
 ## [2.0.1] - 2024-09-09
 
 ### Fixed

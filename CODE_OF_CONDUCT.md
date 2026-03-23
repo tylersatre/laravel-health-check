@@ -60,8 +60,8 @@ representative at an online or offline event.
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported to the community leaders responsible for enforcement at
-**open-source@ukfast.co.uk**.
+reported to the community leaders responsible for enforcement via
+the [GitHub issue tracker](https://github.com/tylersatre/laravel-health-check/issues).
 
 All complaints will be reviewed and investigated promptly and fairly.
 
