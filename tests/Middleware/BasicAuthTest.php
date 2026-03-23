@@ -2,7 +2,9 @@
 
 namespace Tests\Middleware;
 
+use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Tests\TestCase;
 use UKFast\HealthCheck\Middleware\BasicAuth;
 
@@ -20,7 +22,7 @@ class BasicAuthTest extends TestCase
             'PHP_AUTH_PW' => 'wrong-password',
         ]);
 
-        $response = (new BasicAuth())->handle($request, fn(): \Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\Response => response('body', 500));
+        $response = (new BasicAuth())->handle($request, fn(): ResponseFactory|Response => response('body', 500));
 
         $this->assertSame('', $response->getContent());
         $this->assertSame(500, $response->status());
@@ -35,7 +37,7 @@ class BasicAuthTest extends TestCase
 
         $request = Request::create('/health', 'GET');
 
-        $response = (new BasicAuth())->handle($request, fn(): \Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\Response => response('body', 500));
+        $response = (new BasicAuth())->handle($request, fn(): ResponseFactory|Response => response('body', 500));
 
         $this->assertSame('', $response->getContent());
         $this->assertSame(500, $response->status());
@@ -53,7 +55,7 @@ class BasicAuthTest extends TestCase
             'PHP_AUTH_PW' => 'correct-password',
         ]);
 
-        $response = (new BasicAuth())->handle($request, fn(): \Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\Response => response('body', 500));
+        $response = (new BasicAuth())->handle($request, fn(): ResponseFactory|Response => response('body', 500));
 
         $this->assertSame('body', $response->getContent());
         $this->assertSame(500, $response->status());
