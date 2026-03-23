@@ -1,5 +1,5 @@
 {
-    "name": "ans-group/laravel-health-check",
+    "name": "tylersatre/laravel-health-check",
     "description": "A package for checking the health of your Laravel/Lumen applications.",
     "keywords": [
         "ukfast",
